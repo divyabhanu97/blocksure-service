@@ -1,0 +1,32 @@
+[
+  {
+    "orgName": "vkyc",
+    "orgDoamin": "vkyc.com",
+    "peerPort": "7051"
+  },
+  {
+    "orgName": "alwaysfirst",
+    "orgDoamin": "alwaysfirst.com",
+    "peerPort": "7056"
+  },
+  {
+    "orgName": "safegeneral",
+    "orgDoamin": "safegeneral.com",
+    "peerPort": "7061"
+  },
+  {
+    "orgName": "government",
+    "orgDoamin": "government.com",
+    "peerPort": "7066"
+  },
+  {
+    "orgName": "merchant",
+    "orgDoamin": "merchant.com",
+    "peerPort": "7071"
+  },
+  {
+    "orgName": "nextgeneral",
+    "orgDoamin": "nextgeneral.com",
+    "peerPort": "7076"
+  }
+]

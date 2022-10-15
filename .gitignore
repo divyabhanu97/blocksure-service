@@ -1,0 +1,13 @@
+node_modules/
+artifacts/channel/crypto-config
+dist/
+npm-debug.log
+.project
+logs
+coverage
+jsconfig.json
+.vscode
+chaincode/vendor/
+debug.log
+node_modules/
+test-network/organizations/fabric-ca/

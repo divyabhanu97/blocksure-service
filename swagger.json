@@ -1,0 +1,551 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Documentation of vkyc Blockchain Application",
+        "description": "Detailed documentation of apis in vkyc with Swagger",
+        "contact": {
+            "name": "Blockchain_COE",
+            "email": "blockchain_coe@mindtree.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://13.71.6.76:51399",
+            "description": "Back-end server"
+        }
+    ],
+    "tags": [
+        {
+            "name": "StakeHolder",
+            "description": "APIs for StakeHolder in the system"
+        }
+    ],
+    "paths": {
+        "/stake-holder/addinfo": {
+            "post": {
+                "tags": [
+                    "StakeHolder"
+                ],
+                "description": "To Add Stake Holder information in Blockchain",
+                "requestBody": {
+                    "required": true,
+                    "description": "Merchant Details are fetched from Merchant Node",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/addStakeHolder"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Stake Holder Document  Added Successfully!!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/addStakeHolderResponse"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal Error"
+                    }
+                }
+            }
+        },
+        "/stake-holder/getallinfo": {
+            "get": {
+                "tags": [
+                    "StakeHolder"
+                ],
+                "description": "To Get All Information Stored in a particular StakeHolder Node",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "type",
+                        "description": "The Type of StakeHolder ex. Verification_Agency, Primary_Bank, etc.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Stake Holders Details Fetched Successfully!!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getAllInfoResponse"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Could not fetch  the Stake Holder details. Please try again."
+                    }
+                }
+            }
+        },
+        "/stake-holder/get-status-info": {
+            "get": {
+                "tags": [
+                    "StakeHolder"
+                ],
+                "description": "To Get Information Based on Status",
+                "requestBody": {
+                    "required": true,
+                    "description": "Status=All, Pending, Approved, Rejected || type=Merchant,Aquirer_Bank, Verification_Agency,etc.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/statusSchema"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Stake Holders Details Fetched Successfully!!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/statusSchemaResponse"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Could not fetch  the Stake Holder details. Please try again."
+                    }
+                }
+            }
+        },
+        "/stake-holder/get-sinlge-stakeholder": {
+            "get": {
+                "tags": [
+                    "StakeHolder"
+                ],
+                "description": "To Get Information for single Stake Holder",
+                "requestBody": {
+                    "required": true,
+                    "description": "type=Verification_Agency, Primary_Bank,etc.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/singleStakeHolder"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Stake Holder Details Fetched Successfully!!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/singleStakeHolderResponse"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Could not fetch  the Stake Holder details. Please try again."
+                    }
+                }
+            }
+        },
+        "/stake-holder/add-extracted-fields": {
+            "post": {
+                "tags": [
+                    "StakeHolder"
+                ],
+                "description": "To Add AI Extracted Information In Blockchain",
+                "requestBody": {
+                    "required": true,
+                    "description": "type=Verification_Agency, Primary_Bank,etc.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/addExtractedField"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Extracted Fields Added Successfully!!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/addExtractedFieldResponse"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal Error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "UnauthorizedError": {
+                "description": "Access token is missing or invalid"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        },
+        "schemas": {
+            "addStakeHolder": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "Merchant_ID": {
+                        "type": "string"
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "Document_ID": {
+                        "type": "string"
+                    },
+                    "Document_Type": {
+                        "type": "string"
+                    },
+                    "Document_Hash": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "type": "Primary_Bank",
+                    "Merchant_ID": "SSN-3456",
+                    "Document_ID": "D001",
+                    "Document_Type": "DT001",
+                    "Document_Hash": "QmPzHVh8SvHdBXrvwZgSNTNWumAPF473FbcDqh8x9WpuMB",
+                    "ID": "PB1"
+                }
+            },
+            "addStakeHolderResponse": {
+                "properties": {
+                    "data": {
+                        "type": "object"
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "message": {
+                                "type": "string"
+                            },
+                            "statusCode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "data": {},
+                    "status": {
+                        "message": "Stake Holder Info Added Successfully!!",
+                        "statusCode": "200"
+                    }
+                }
+            },
+            "getAllInfoResponse": {
+                "properties": {
+                    "data": {
+                        "type": "object",
+                        "properties": {
+                            "response": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "result": {
+                                        "type": "array"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "message": {
+                                "type": "string"
+                            },
+                            "statusCode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "data": {
+                        "response": {
+                            "status": "SUCCESS",
+                            "result": [
+                                {
+                                    "Acquirer_Bank_Id": "aqb1",
+                                    "Action": "Pending|Successfully Extracted Data",
+                                    "Document_Hash": "QmPzHVh8SvHdBXrvwZgSNTNWumAPF473FbcDqh8x9WpuMB",
+                                    "Document_ID": "D001",
+                                    "Document_Name": "SSN-3456_D001_DT001_aqb1",
+                                    "Document_Type": "DT001",
+                                    "Merchant_Category_Code": "MCC1234",
+                                    "Merchant_ID": "SSN-3456",
+                                    "Primary_Bank_ID": "PB1",
+                                    "Time_Stamp": "2020-08-27T07:20:41.902Z",
+                                    "Type": "Primary_Bank"
+                                }
+                            ]
+                        }
+                    },
+                    "status": {
+                        "message": "Stake Holders Details Fetched Successfully!! ",
+                        "statusCode": "200"
+                    }
+                }
+            },
+            "singleStakeHolder": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "Merchant_ID": {
+                        "type": "string"
+                    },
+                    "[type]_ID": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "type": "Primary_Bank",
+                    "status": "SSN-3456",
+                    "Primary_Bank_ID": "PB1"
+                }
+            },
+            "singleStakeHolderResponse": {
+                "properties": {
+                    "data": {
+                        "type": "object",
+                        "properties": {
+                            "response": {
+                                "type": "object"
+                            }
+                        },
+                        "status": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                },
+                                "statusCode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "data": {
+                        "response": {
+                            "Acquirer_Bank_Id": "aqb1",
+                            "Action": "Pending|Successfully Extracted Data",
+                            "Document_Hash": "QmPzHVh8SvHdBXrvwZgSNTNWumAPF473FbcDqh8x9WpuMB",
+                            "Document_ID": "D001",
+                            "Document_Name": "SSN-3456_D001_DT001_aqb1",
+                            "Document_Type": "DT001",
+                            "Merchant_Category_Code": "MCC1234",
+                            "Merchant_ID": "SSN-3456",
+                            "Primary_Bank_ID": "PB1",
+                            "Time_Stamp": "2020-08-27T07:20:41.902Z",
+                            "Type": "Primary_Bank"
+                        }
+                    },
+                    "status": {
+                        "message": "Primary_Bank Details Fetched successfully!! ",
+                        "statusCode": "200"
+                    }
+                }
+            },
+            "statusSchema": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "type": "Primary_Bank",
+                    "status": "Pending"
+                }
+            },
+            "statusSchemaResponse": {
+                "properties": {
+                    "data": {
+                        "type": "object"
+                    },
+                    "status": {
+                        "data": {
+                            "type": "object",
+                            "properties": {
+                                "response": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "type": "array"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "status": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                },
+                                "statusCode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "data": {
+                        "response": [
+                            {
+                                "Acquirer_Bank_Id": "aqb1",
+                                "Action": "Pending|Successfully Extracted Data",
+                                "Document_Hash": "QmPzHVh8SvHdBXrvwZgSNTNWumAPF473FbcDqh8x9WpuMB",
+                                "Document_ID": "D001",
+                                "Document_Name": "SSN-3456_D001_DT001_aqb1",
+                                "Document_Type": "DT001",
+                                "Merchant_Category_Code": "MCC1234",
+                                "Merchant_ID": "SSN-3456",
+                                "Primary_Bank_ID": "PB1",
+                                "Time_Stamp": "2020-08-27T07:20:41.902Z",
+                                "Type": "Primary_Bank"
+                            }
+                        ]
+                    },
+                    "status": {
+                        "message": "Marchent-Verification Agency Details Fetched Successfully!! ",
+                        "statusCode": "200"
+                    }
+                }
+            },
+            "addExtractedField": {
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "Merchant_ID": {
+                        "type": "string"
+                    },
+                    "[type]_ID": {
+                        "type": "string"
+                    },
+                    "Acquirer_Bank_Id": {
+                        "type": "string"
+                    },
+                    "Merchant_Category_Code": {
+                        "type": "string"
+                    },
+                    "doctype": {
+                        "type": "string"
+                    },
+                    "hashval:": {
+                        "type": "string"
+                    },
+                    "documentDetails::": {
+                        "type": "array"
+                    }
+                            },
+            "example": {
+                "type": "Verification_Agency",
+                "Merchant_Category_Code": "MCC3456",
+                "Merchant_ID": "SSN-3456",
+                "Acquirer_Bank_Id": "aqb1",
+                "Verification_Agency_ID": "VA1",
+                "doctype": "D002",
+                "hashval": "QmPzHVh8SvHdBXrvwZgSNTNWumAPF473FbcDqh8x9WpuMB",
+                "documentDetails": [
+                    {
+                        "D002": {
+                            "brc_acct_number": "2250-8479",
+                            "brc_certificate_numb": "L897 AVONDALE RD",
+                            "brc_iss_comp_address_1": "897 AVONDALE RD",
+                            "brc_iss_comp_address_2": "MARTINSBURG, WV 25404-7057",
+                            "brc_iss_to_comp_name": "(TINADAWN N TECHNOLOGY)",
+                            "brc_iss_to_comp_type": "DBA TNT SUPPORTER",
+                            "brc_iss_to_per_name": "TINA STRATTON",
+                            "brc_issue_date": "03/1/2011",
+                            "brc_issue_state": "WEST VIRGINIA",
+                            "brc_version": "atL006 v.4"
+                        }
+                    }
+                ]
+            }
+            },
+            "addExtractedFieldResponse": {
+                "properties": {
+                    "data": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "message": {
+                                "type": "string"
+                            },
+                            "statusCode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "data": "Added Extracted Fields Successfully",
+                    "status": {
+                        "message": "Extracted Fields Added Successfully!!",
+                        "statusCode": "200"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ]
+}

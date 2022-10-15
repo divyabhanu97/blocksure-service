@@ -1,0 +1,122 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+volumes:
+  # orderer.example.com:
+  peer0.ORG_DOMAIN:
+  # peer0.org2.example.com:
+
+networks:
+  test:
+
+services: 
+
+  couchdbORG_NAME:
+    container_name: couchdbORG_NAME
+    image: hyperledger/fabric-couchdb
+    # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
+    # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "COUCHPORT:5984"
+    networks:
+      - test
+
+  peer0.ORG_DOMAIN:
+    container_name: peer0.ORG_DOMAIN
+    image: hyperledger/fabric-peer:$IMAGE_TAG
+    environment:
+      #Generic peer variables
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      # the following setting starts chaincode containers on the same
+      # bridge network as the peers
+      # https://docs.docker.com/compose/networking/
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${COMPOSE_PROJECT_NAME}_test
+      - FABRIC_LOGGING_SPEC=INFO
+      #- FABRIC_LOGGING_SPEC=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+      # Peer specific variabes
+      - CORE_PEER_ID=peer0.ORG_DOMAIN
+      - CORE_PEER_ADDRESS=peer0.ORG_DOMAIN:PEERPORT
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:PEERPORT
+      - CORE_PEER_CHAINCODEADDRESS=peer0.ORG_DOMAIN:CHAINPORT
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:CHAINPORT
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.ORG_DOMAIN:PEERPORT
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.ORG_DOMAIN:PEERPORT
+      - CORE_PEER_LOCALMSPID=ORG_NAMEMSP
+
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbORG_NAME:5984
+      # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
+      # provide the credentials for ledger to connect to CouchDB.  The username and password must
+      # match the username and password set for the associated CouchDB.
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+
+    depends_on:
+      - couchdbORG_NAME
+    volumes:
+        - /var/run/:/host/var/run/
+        - ../../organizations/peerOrganizations/ORG_DOMAIN/peers/peer0.ORG_DOMAIN/msp:/etc/hyperledger/fabric/msp
+        - ../../organizations/peerOrganizations/ORG_DOMAIN/peers/peer0.ORG_DOMAIN/tls:/etc/hyperledger/fabric/tls
+        # - peer0.ORG_DOMAIN:/var/hyperledger/production
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: peer node start
+    ports:
+      - PEERPORT:PEERPORT
+    networks:
+      - test
+
+  # peer0.org2.example.com:
+  #   container_name: peer0.org2.example.com
+  #   image: hyperledger/fabric-peer:$IMAGE_TAG
+  #   environment:
+  #     #Generic peer variables
+  #     - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+  #     # the following setting starts chaincode containers on the same
+  #     # bridge network as the peers
+  #     # https://docs.docker.com/compose/networking/
+  #     - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${COMPOSE_PROJECT_NAME}_test
+  #     - FABRIC_LOGGING_SPEC=INFO
+  #     #- FABRIC_LOGGING_SPEC=DEBUG
+  #     - CORE_PEER_TLS_ENABLED=true
+  #     - CORE_PEER_GOSSIP_USELEADERELECTION=true
+  #     - CORE_PEER_GOSSIP_ORGLEADER=false
+  #     - CORE_PEER_PROFILE_ENABLED=true
+  #     - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+  #     - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+  #     - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+  #     # Peer specific variabes
+  #     - CORE_PEER_ID=peer0.org2.example.com
+  #     - CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+  #     - CORE_PEER_LISTENADDRESS=0.0.0.0:9051
+  #     - CORE_PEER_CHAINCODEADDRESS=peer0.org2.example.com:9052
+  #     - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:9052
+  #     - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org2.example.com:9051
+  #     - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org2.example.com:9051
+  #     - CORE_PEER_LOCALMSPID=Org2MSP
+  #   volumes:
+  #       - /var/run/:/host/var/run/
+  #       - ../organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp:/etc/hyperledger/fabric/msp
+  #       - ../organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls:/etc/hyperledger/fabric/tls
+  #       - peer0.org2.example.com:/var/hyperledger/production
+  #   working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+  #   command: peer node start
+  #   ports:
+  #     - 9051:9051
+  #   networks:
+  #     - test  

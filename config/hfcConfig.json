@@ -1,0 +1,8 @@
+{
+    "CC_SRC_PATH": "../chaincode/fabcar/javascript/",
+    "noOfPeers": 1,
+    "channelName": "mychannel",
+    "chaincodeName": "vkycchaincode",
+    "chaincodeVersion": "1.0",
+    "chaincodePath": "./artifacts/src/chaincode"
+}
