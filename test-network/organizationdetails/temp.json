@@ -5,28 +5,38 @@
     "peerPort": "7051"
   },
   {
-    "orgName": "alwaysfirst",
-    "orgDoamin": "alwaysfirst.com",
+    "orgName": "ahamshield",
+    "orgDoamin": "ahamshield.com",
     "peerPort": "7056"
   },
   {
-    "orgName": "safegeneral",
-    "orgDoamin": "safegeneral.com",
+    "orgName": "vitasecure",
+    "orgDoamin": "vitasecure.com",
     "peerPort": "7061"
+  },
+  {
+    "orgName": "hdcinsurance",
+    "orgDoamin": "hdcinsurance.com",
+    "peerPort": "7066"
+  },
+  {
+    "orgName": "autocarex",
+    "orgDoamin": "autocarex.com",
+    "peerPort": "7071"
+  },
+  {
+    "orgName": "careforu",
+    "orgDoamin": "careforu.com",
+    "peerPort": "7076"
   },
   {
     "orgName": "government",
     "orgDoamin": "government.com",
-    "peerPort": "7066"
+    "peerPort": "7081"
   },
   {
     "orgName": "merchant",
     "orgDoamin": "merchant.com",
-    "peerPort": "7071"
-  },
-  {
-    "orgName": "nextgeneral",
-    "orgDoamin": "nextgeneral.com",
-    "peerPort": "7076"
+    "peerPort": "7086"
   }
 ]

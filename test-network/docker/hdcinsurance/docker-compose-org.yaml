@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   # orderer.example.com:
-  peer0.merchant.com:
+  peer0.hdcinsurance.com:
   # peer0.org2.example.com:
 
 networks:
@@ -15,8 +15,8 @@ networks:
 
 services: 
 
-  couchdbmerchant:
-    container_name: couchdbmerchant
+  couchdbhdcinsurance:
+    container_name: couchdbhdcinsurance
     image: hyperledger/fabric-couchdb
     # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
     # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
@@ -26,12 +26,12 @@ services:
     # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
-      - "7088:5984"
+      - "7068:5984"
     networks:
       - test
 
-  peer0.merchant.com:
-    container_name: peer0.merchant.com
+  peer0.hdcinsurance.com:
+    container_name: peer0.hdcinsurance.com
     image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       #Generic peer variables
@@ -50,17 +50,17 @@ services:
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variabes
-      - CORE_PEER_ID=peer0.merchant.com
-      - CORE_PEER_ADDRESS=peer0.merchant.com:7086
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7086
-      - CORE_PEER_CHAINCODEADDRESS=peer0.merchant.com:7087
-      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7087
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.merchant.com:7086
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.merchant.com:7086
-      - CORE_PEER_LOCALMSPID=merchantMSP
+      - CORE_PEER_ID=peer0.hdcinsurance.com
+      - CORE_PEER_ADDRESS=peer0.hdcinsurance.com:7066
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:7066
+      - CORE_PEER_CHAINCODEADDRESS=peer0.hdcinsurance.com:7067
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7067
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.hdcinsurance.com:7066
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.hdcinsurance.com:7066
+      - CORE_PEER_LOCALMSPID=hdcinsuranceMSP
 
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbmerchant:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbhdcinsurance:5984
       # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
       # provide the credentials for ledger to connect to CouchDB.  The username and password must
       # match the username and password set for the associated CouchDB.
@@ -68,16 +68,16 @@ services:
       - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
 
     depends_on:
-      - couchdbmerchant
+      - couchdbhdcinsurance
     volumes:
         - /var/run/:/host/var/run/
-        - ../../organizations/peerOrganizations/merchant.com/peers/peer0.merchant.com/msp:/etc/hyperledger/fabric/msp
-        - ../../organizations/peerOrganizations/merchant.com/peers/peer0.merchant.com/tls:/etc/hyperledger/fabric/tls
-        # - peer0.merchant.com:/var/hyperledger/production
+        - ../../organizations/peerOrganizations/hdcinsurance.com/peers/peer0.hdcinsurance.com/msp:/etc/hyperledger/fabric/msp
+        - ../../organizations/peerOrganizations/hdcinsurance.com/peers/peer0.hdcinsurance.com/tls:/etc/hyperledger/fabric/tls
+        # - peer0.hdcinsurance.com:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
-      - 7086:7086
+      - 7066:7066
     networks:
       - test
 

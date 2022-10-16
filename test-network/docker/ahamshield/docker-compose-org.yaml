@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   # orderer.example.com:
-  peer0.safegeneral.com:
+  peer0.ahamshield.com:
   # peer0.org2.example.com:
 
 networks:
@@ -15,8 +15,8 @@ networks:
 
 services: 
 
-  couchdbsafegeneral:
-    container_name: couchdbsafegeneral
+  couchdbahamshield:
+    container_name: couchdbahamshield
     image: hyperledger/fabric-couchdb
     # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
     # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
@@ -26,12 +26,12 @@ services:
     # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
-      - "7063:5984"
+      - "7058:5984"
     networks:
       - test
 
-  peer0.safegeneral.com:
-    container_name: peer0.safegeneral.com
+  peer0.ahamshield.com:
+    container_name: peer0.ahamshield.com
     image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       #Generic peer variables
@@ -50,17 +50,17 @@ services:
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variabes
-      - CORE_PEER_ID=peer0.safegeneral.com
-      - CORE_PEER_ADDRESS=peer0.safegeneral.com:7061
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7061
-      - CORE_PEER_CHAINCODEADDRESS=peer0.safegeneral.com:7062
-      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7062
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.safegeneral.com:7061
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.safegeneral.com:7061
-      - CORE_PEER_LOCALMSPID=safegeneralMSP
+      - CORE_PEER_ID=peer0.ahamshield.com
+      - CORE_PEER_ADDRESS=peer0.ahamshield.com:7056
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:7056
+      - CORE_PEER_CHAINCODEADDRESS=peer0.ahamshield.com:7057
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7057
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.ahamshield.com:7056
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.ahamshield.com:7056
+      - CORE_PEER_LOCALMSPID=ahamshieldMSP
 
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbsafegeneral:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbahamshield:5984
       # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
       # provide the credentials for ledger to connect to CouchDB.  The username and password must
       # match the username and password set for the associated CouchDB.
@@ -68,16 +68,16 @@ services:
       - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
 
     depends_on:
-      - couchdbsafegeneral
+      - couchdbahamshield
     volumes:
         - /var/run/:/host/var/run/
-        - ../../organizations/peerOrganizations/safegeneral.com/peers/peer0.safegeneral.com/msp:/etc/hyperledger/fabric/msp
-        - ../../organizations/peerOrganizations/safegeneral.com/peers/peer0.safegeneral.com/tls:/etc/hyperledger/fabric/tls
-        # - peer0.safegeneral.com:/var/hyperledger/production
+        - ../../organizations/peerOrganizations/ahamshield.com/peers/peer0.ahamshield.com/msp:/etc/hyperledger/fabric/msp
+        - ../../organizations/peerOrganizations/ahamshield.com/peers/peer0.ahamshield.com/tls:/etc/hyperledger/fabric/tls
+        # - peer0.ahamshield.com:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
-      - 7061:7061
+      - 7056:7056
     networks:
       - test
 

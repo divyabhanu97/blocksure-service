@@ -134,7 +134,7 @@ function getAllOrganizations() {
                 let queryResult = await queryService.query(orgName, orgDomain, fcn, input);
                 console.log("Query Result",queryResult);
                 var result = queryResult.result.filter(function(e, i) {
-                    return queryResult.result[i].type == 'Insurer' 
+                    return (queryResult.result[i].type == 'Health' || queryResult.result[i].type == 'Home' || queryResult.result[i].type == 'Auto' || queryResult.result[i].type == 'General')
                   })
                 resolve(result);
             }catch( err) {

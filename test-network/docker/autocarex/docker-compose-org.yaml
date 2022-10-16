@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   # orderer.example.com:
-  peer0.alwaysfirst.com:
+  peer0.autocarex.com:
   # peer0.org2.example.com:
 
 networks:
@@ -15,8 +15,8 @@ networks:
 
 services: 
 
-  couchdbalwaysfirst:
-    container_name: couchdbalwaysfirst
+  couchdbautocarex:
+    container_name: couchdbautocarex
     image: hyperledger/fabric-couchdb
     # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
     # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
@@ -26,12 +26,12 @@ services:
     # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
-      - "7058:5984"
+      - "7073:5984"
     networks:
       - test
 
-  peer0.alwaysfirst.com:
-    container_name: peer0.alwaysfirst.com
+  peer0.autocarex.com:
+    container_name: peer0.autocarex.com
     image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       #Generic peer variables
@@ -50,17 +50,17 @@ services:
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variabes
-      - CORE_PEER_ID=peer0.alwaysfirst.com
-      - CORE_PEER_ADDRESS=peer0.alwaysfirst.com:7056
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7056
-      - CORE_PEER_CHAINCODEADDRESS=peer0.alwaysfirst.com:7057
-      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7057
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.alwaysfirst.com:7056
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.alwaysfirst.com:7056
-      - CORE_PEER_LOCALMSPID=alwaysfirstMSP
+      - CORE_PEER_ID=peer0.autocarex.com
+      - CORE_PEER_ADDRESS=peer0.autocarex.com:7071
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:7071
+      - CORE_PEER_CHAINCODEADDRESS=peer0.autocarex.com:7072
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7072
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.autocarex.com:7071
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.autocarex.com:7071
+      - CORE_PEER_LOCALMSPID=autocarexMSP
 
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbalwaysfirst:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbautocarex:5984
       # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
       # provide the credentials for ledger to connect to CouchDB.  The username and password must
       # match the username and password set for the associated CouchDB.
@@ -68,16 +68,16 @@ services:
       - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
 
     depends_on:
-      - couchdbalwaysfirst
+      - couchdbautocarex
     volumes:
         - /var/run/:/host/var/run/
-        - ../../organizations/peerOrganizations/alwaysfirst.com/peers/peer0.alwaysfirst.com/msp:/etc/hyperledger/fabric/msp
-        - ../../organizations/peerOrganizations/alwaysfirst.com/peers/peer0.alwaysfirst.com/tls:/etc/hyperledger/fabric/tls
-        # - peer0.alwaysfirst.com:/var/hyperledger/production
+        - ../../organizations/peerOrganizations/autocarex.com/peers/peer0.autocarex.com/msp:/etc/hyperledger/fabric/msp
+        - ../../organizations/peerOrganizations/autocarex.com/peers/peer0.autocarex.com/tls:/etc/hyperledger/fabric/tls
+        # - peer0.autocarex.com:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
-      - 7056:7056
+      - 7071:7071
     networks:
       - test
 

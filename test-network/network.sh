@@ -337,7 +337,7 @@ function deployCC() {
 # Tear down running network
 function networkDown() {
   # stop org3 containers also in addition to org1 and org2, in case we were running sample to add org3
-  docker-compose -f $COMPOSE_FILE_BASE -f $COMPOSE_FILE_COUCH -f $COMPOSE_FILE_CA down --volumes --remove-orphans
+  # docker-compose -f $COMPOSE_FILE_BASE -f $COMPOSE_FILE_COUCH -f $COMPOSE_FILE_CA down --volumes --remove-orphans
   docker-compose -f ${PWD}/docker/docker-orderer.yaml down --volumes --remove-orphans
   # rm -rf *.json
   rm -rf ./config.json  ./config_update_in_envelope.json  ./modified_config.json ./config_update.json ./modified_anchor_config.json

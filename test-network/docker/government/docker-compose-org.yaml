@@ -26,7 +26,7 @@ services:
     # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
-      - "7068:5984"
+      - "7083:5984"
     networks:
       - test
 
@@ -51,12 +51,12 @@ services:
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variabes
       - CORE_PEER_ID=peer0.government.com
-      - CORE_PEER_ADDRESS=peer0.government.com:7066
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7066
-      - CORE_PEER_CHAINCODEADDRESS=peer0.government.com:7067
-      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7067
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.government.com:7066
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.government.com:7066
+      - CORE_PEER_ADDRESS=peer0.government.com:7081
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:7081
+      - CORE_PEER_CHAINCODEADDRESS=peer0.government.com:7082
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7082
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.government.com:7081
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.government.com:7081
       - CORE_PEER_LOCALMSPID=governmentMSP
 
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
@@ -77,7 +77,7 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
-      - 7066:7066
+      - 7081:7081
     networks:
       - test
 

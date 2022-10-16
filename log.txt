@@ -1,0 +1,811 @@
+
+> vkyc-organization-services@1.0.0 start /home/blocksure/vkyc-blockchainservice
+> node app.js PROD
+
+2022-10-16T02:38:53.788Z - [32minfo[39m: [vkyc-services] Setting up properties for  PROD  environment
+2022-10-16T02:38:54.487Z - [32minfo[39m: [vkyc-services] ****************** SERVER STARTED ************************
+2022-10-16T02:38:54.487Z - [32minfo[39m: [vkyc-services] ***************  http://20.198.243.63:4000  ******************
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 344.189 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 195.518 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [32m200[0m 194.713 ms - 858[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 198.409 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 189.335 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [32m200[0m 184.937 ms - 858[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 185.028 ms - -[0m
+Controller PAN Number 111122223333
+Input { panNumber: '111122223333' }
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {"panNumber":"111122223333"}
+[]
+Transaction has been evaluated, result is: []
+[0mGET /apis/v1/merchants/111122223333 [32m200[0m 176.207 ms - 81[0m
+[0mOPTIONS /apis/v1/merchants [32m204[0m 0.497 ms - 0[0m
+2022-10-16T03:11:42.842Z - [32minfo[39m: [vkyc-services] merchant details  bankId=hdcinsurance, consentShared=false, name=John Smith, dob=12/13/1990, country=India, phone=9830012345, address=New York, gender=Male, postalCode=700001, city=New York, panNumber=111122223333, panCard=Pending, aadhaarCard=Pending, vkyc=Pending
+inside add merchant service {
+  bankId: 'hdcinsurance',
+  consentShared: false,
+  merchantDetails: {
+    name: 'John Smith',
+    dob: '12/13/1990',
+    country: 'India',
+    phone: '9830012345',
+    address: 'New York',
+    gender: 'Male',
+    postalCode: '700001',
+    city: 'New York',
+    panNumber: '111122223333'
+  },
+  verificationStatus: { panCard: 'Pending', aadhaarCard: 'Pending', vkyc: 'Pending' }
+}
+=================json data =========================
+{
+  bankId: 'hdcinsurance',
+  consentShared: false,
+  merchantDetails: {
+    name: 'John Smith',
+    dob: '12/13/1990',
+    country: 'India',
+    phone: '9830012345',
+    address: 'New York',
+    gender: 'Male',
+    postalCode: '700001',
+    city: 'New York',
+    panNumber: '111122223333'
+  },
+  verificationStatus: { panCard: 'Pending', aadhaarCard: 'Pending', vkyc: 'Pending' }
+}
+=======================data===========================
+=======================data===========================
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"name":"John Smith","dob":"12/13/1990","country":"India","phone":"9830012345","address":"New York","gender":"Male","postalCode":"700001","city":"New York","panNumber":"111122223333"},"verificationStatus":{"panCard":"Pending","aadhaarCard":"Pending","vkyc":"Pending"}}
+===============final invoke----------------------
+addMerchant
+Transaction has been submitted
+chaincode output { status: 'SUCCESS' }
+[0mPOST /apis/v1/merchants [32m200[0m 10451.536 ms - 116[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 168.221 ms - -[0m
+Controller PAN Number 111122223333
+Input { panNumber: '111122223333' }
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {"panNumber":"111122223333"}
+[{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants/111122223333 [32m200[0m 202.574 ms - 414[0m
+[0mOPTIONS /apis/v1/merchants [32m204[0m 0.180 ms - 0[0m
+2022-10-16T03:12:55.639Z - [32minfo[39m: [vkyc-services] merchant details  bankId=autocarex, consentShared=false, name=Jane Doe, dob=12/13/1990, country=India, phone=9830012345, address=Nowhere, gender=Female, postalCode=700001, city=Blah, panNumber=111122223333, panCard=Pending, aadhaarCard=Pending, vkyc=Pending
+inside add merchant service {
+  bankId: 'autocarex',
+  consentShared: false,
+  merchantDetails: {
+    name: 'Jane Doe',
+    dob: '12/13/1990',
+    country: 'India',
+    phone: '9830012345',
+    address: 'Nowhere',
+    gender: 'Female',
+    postalCode: '700001',
+    city: 'Blah',
+    panNumber: '111122223333'
+  },
+  verificationStatus: { panCard: 'Pending', aadhaarCard: 'Pending', vkyc: 'Pending' }
+}
+=================json data =========================
+{
+  bankId: 'autocarex',
+  consentShared: false,
+  merchantDetails: {
+    name: 'Jane Doe',
+    dob: '12/13/1990',
+    country: 'India',
+    phone: '9830012345',
+    address: 'Nowhere',
+    gender: 'Female',
+    postalCode: '700001',
+    city: 'Blah',
+    panNumber: '111122223333'
+  },
+  verificationStatus: { panCard: 'Pending', aadhaarCard: 'Pending', vkyc: 'Pending' }
+}
+=======================data===========================
+=======================data===========================
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+{"bankId":"autocarex","consentShared":false,"merchantDetails":{"name":"Jane Doe","dob":"12/13/1990","country":"India","phone":"9830012345","address":"Nowhere","gender":"Female","postalCode":"700001","city":"Blah","panNumber":"111122223333"},"verificationStatus":{"panCard":"Pending","aadhaarCard":"Pending","vkyc":"Pending"}}
+===============final invoke----------------------
+addMerchant
+Transaction has been submitted
+chaincode output { status: 'SUCCESS' }
+[0mPOST /apis/v1/merchants [32m200[0m 10352.438 ms - 116[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 166.399 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [32m200[0m 174.344 ms - 858[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 176.987 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [32m200[0m 194.730 ms - 1848[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 163.158 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 180.953 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 243.214 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 393.473 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+Transaction has been evaluated, result is: [{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"Nowhere","city":"Blah","country":"India","dob":"12/13/1990","gender":"Female","name":"Jane Doe","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"hdcinsurance","consentShared":false,"merchantDetails":{"address":"New York","city":"New York","country":"India","dob":"12/13/1990","gender":"Male","name":"John Smith","panNumber":"111122223333","phone":"9830012345","postalCode":"700001"},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"ahamshield","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"autocarex","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"Divya Bhanu Althi","panNumber":"266063805445","phone":8790122934,"postalCode":560059},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}},{"bankId":"careforu","consentShared":false,"merchantDetails":{"address":"mindtree global village ,bengaluru","city":"Bengaluru","country":"India","dob":"08/04/1992","gender":"Male","name":"REDDI RAJEEV","panNumber":"266063805445","phone":8790122934,"postalCode":560008},"verificationStatus":{"aadhaarCard":"Pending","panCard":"Pending","vkyc":"Pending"}}]
+[0mGET /apis/v1/merchants [36m304[0m 195.790 ms - -[0m
+Wallet path: /home/blocksure/vkyc-blockchainservice/wallet
+i am inside input  {}
+[{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Transaction has been evaluated, result is: [{"address":"sample address","category":"sample","domain":"ahamshield.com","fullName":"AHAMShield","orgName":"ahamshield","status":"active","type":"General"},{"address":"sample address","category":"sample","domain":"autocarex.com","fullName":"AutoCareX","orgName":"autocarex","status":"active","type":"Auto"},{"address":"sample address","category":"sample","domain":"careforu.com","fullName":"CareForU","orgName":"careforu","status":"active","type":"Health"},{"address":"sample address","category":"sample","domain":"government.com","fullName":"Indian Government","orgName":"government","status":"active","type":"Government"},{"address":"sample address","category":"sample","domain":"hdcinsurance.com","fullName":"HDCInsurance","orgName":"hdcinsurance","status":"active","type":"Home"},{"address":"sample address","category":"sample","domain":"merchant.com","fullName":"Merchant","orgName":"merchant","status":"active","type":"Merchant"},{"address":"sample address","category":"sample","domain":"vitasecure.com","fullName":"VitaSecure","orgName":"vitasecure","status":"active","type":"Health"}]
+Query Result {
+  status: 'SUCCESS',
+  result: [
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'ahamshield.com',
+      fullName: 'AHAMShield',
+      orgName: 'ahamshield',
+      status: 'active',
+      type: 'General'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'autocarex.com',
+      fullName: 'AutoCareX',
+      orgName: 'autocarex',
+      status: 'active',
+      type: 'Auto'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'careforu.com',
+      fullName: 'CareForU',
+      orgName: 'careforu',
+      status: 'active',
+      type: 'Health'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'government.com',
+      fullName: 'Indian Government',
+      orgName: 'government',
+      status: 'active',
+      type: 'Government'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'hdcinsurance.com',
+      fullName: 'HDCInsurance',
+      orgName: 'hdcinsurance',
+      status: 'active',
+      type: 'Home'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'merchant.com',
+      fullName: 'Merchant',
+      orgName: 'merchant',
+      status: 'active',
+      type: 'Merchant'
+    },
+    {
+      address: 'sample address',
+      category: 'sample',
+      domain: 'vitasecure.com',
+      fullName: 'VitaSecure',
+      orgName: 'vitasecure',
+      status: 'active',
+      type: 'Health'
+    }
+  ]
+}
+[0mGET /apis/v1/organizations [36m304[0m 151.580 ms - -[0m

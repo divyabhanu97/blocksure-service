@@ -10,19 +10,19 @@ networks:
 
 services:
 
-  ca_government:
+  ca_careforu:
     image: hyperledger/fabric-ca:$IMAGE_TAG
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
-      - FABRIC_CA_SERVER_CA_NAME=ca-government
+      - FABRIC_CA_SERVER_CA_NAME=ca-careforu
       - FABRIC_CA_SERVER_TLS_ENABLED=true
-      - FABRIC_CA_SERVER_PORT=7084
+      - FABRIC_CA_SERVER_PORT=7079
     ports:
-      - "7084:7084" 
+      - "7079:7079" 
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
     volumes:
-      - ../../organizations/fabric-ca/government:/etc/hyperledger/fabric-ca-server
-    container_name: ca_government
+      - ../../organizations/fabric-ca/careforu:/etc/hyperledger/fabric-ca-server
+    container_name: ca_careforu
     networks:
       - test
 

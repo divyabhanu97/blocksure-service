@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   # orderer.example.com:
-  peer0.nextgeneral.com:
+  peer0.vitasecure.com:
   # peer0.org2.example.com:
 
 networks:
@@ -15,8 +15,8 @@ networks:
 
 services: 
 
-  couchdbnextgeneral:
-    container_name: couchdbnextgeneral
+  couchdbvitasecure:
+    container_name: couchdbvitasecure
     image: hyperledger/fabric-couchdb
     # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
     # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
@@ -26,12 +26,12 @@ services:
     # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
     # for example map it to utilize Fauxton User Interface in dev environments.
     ports:
-      - "7078:5984"
+      - "7063:5984"
     networks:
       - test
 
-  peer0.nextgeneral.com:
-    container_name: peer0.nextgeneral.com
+  peer0.vitasecure.com:
+    container_name: peer0.vitasecure.com
     image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       #Generic peer variables
@@ -50,17 +50,17 @@ services:
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variabes
-      - CORE_PEER_ID=peer0.nextgeneral.com
-      - CORE_PEER_ADDRESS=peer0.nextgeneral.com:7076
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7076
-      - CORE_PEER_CHAINCODEADDRESS=peer0.nextgeneral.com:7077
-      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7077
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.nextgeneral.com:7076
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.nextgeneral.com:7076
-      - CORE_PEER_LOCALMSPID=nextgeneralMSP
+      - CORE_PEER_ID=peer0.vitasecure.com
+      - CORE_PEER_ADDRESS=peer0.vitasecure.com:7061
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:7061
+      - CORE_PEER_CHAINCODEADDRESS=peer0.vitasecure.com:7062
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7062
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.vitasecure.com:7061
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.vitasecure.com:7061
+      - CORE_PEER_LOCALMSPID=vitasecureMSP
 
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbnextgeneral:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbvitasecure:5984
       # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
       # provide the credentials for ledger to connect to CouchDB.  The username and password must
       # match the username and password set for the associated CouchDB.
@@ -68,16 +68,16 @@ services:
       - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
 
     depends_on:
-      - couchdbnextgeneral
+      - couchdbvitasecure
     volumes:
         - /var/run/:/host/var/run/
-        - ../../organizations/peerOrganizations/nextgeneral.com/peers/peer0.nextgeneral.com/msp:/etc/hyperledger/fabric/msp
-        - ../../organizations/peerOrganizations/nextgeneral.com/peers/peer0.nextgeneral.com/tls:/etc/hyperledger/fabric/tls
-        # - peer0.nextgeneral.com:/var/hyperledger/production
+        - ../../organizations/peerOrganizations/vitasecure.com/peers/peer0.vitasecure.com/msp:/etc/hyperledger/fabric/msp
+        - ../../organizations/peerOrganizations/vitasecure.com/peers/peer0.vitasecure.com/tls:/etc/hyperledger/fabric/tls
+        # - peer0.vitasecure.com:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
-      - 7076:7076
+      - 7061:7061
     networks:
       - test
 
